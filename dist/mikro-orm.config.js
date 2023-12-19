@@ -8,7 +8,7 @@ const Post_1 = require("./entities/Post");
 const path_1 = __importDefault(require("path"));
 exports.default = {
     migrations: {
-        path: path_1.default.join(__dirname, "/.migrations"),
+        path: path_1.default.join(__dirname, "./migrations"),
         pattern: /^[\w-]+\d+\.[tj]s$/,
     },
     entities: [Post_1.Post],
@@ -17,5 +17,6 @@ exports.default = {
     password: 'Pasta#123395',
     type: 'postgresql',
     debug: !constants_1.__prod__,
+    allowGlobalContext: true,
 };
 //# sourceMappingURL=mikro-orm.config.js.map
